@@ -1,5 +1,5 @@
 {
-  "homepage": "https://alanchrissantony.github.io/Amazon",
+  "homepage": ".",
   "name": "frontend",
   "proxy": "https://amazon-backend-w8ny.onrender.com",
   "version": "0.1.0",

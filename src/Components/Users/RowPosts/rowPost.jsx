@@ -22,7 +22,9 @@ function RowPost() {
           setLoading(false)
           const{data}=await axios.post('/api/products/62e93ab19d39866975775821')
           setLoading(false)
-          setProducts(data)
+          if(typeof(data) != 'string'){
+            setProducts(data);
+          }
         }catch(err){
           setError(err.message)
           setLoading(false)

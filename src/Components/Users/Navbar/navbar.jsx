@@ -35,13 +35,17 @@ function Home() {
   const get_departments = async () => {
     let url = "/api/departments";
     const { data } = await axios.post(url);
-    setDepartments(data);
+    if(typeof(data) != 'string'){
+      setDepartments(data);
+    }
   };
 
   const get_products = async () => {
     let url = "/api/products";
     const { data } = await axios.get(url);
-    setProducts(data);
+    if(typeof(data) != 'string'){
+      setProducts(data);
+    }
   };
 
   const activate_sidebar = () => {

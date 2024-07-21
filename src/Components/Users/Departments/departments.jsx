@@ -21,7 +21,9 @@ function Departments() {
         setLoading(true)
         const {data} =await axios.post('/api/departments')
         setLoading(false)
-        setDepartments(data)
+        if(typeof(data) != 'string'){
+          setDepartments(data);
+        }
       }catch(err){
         setError(err.message)
         setLoading(false)
